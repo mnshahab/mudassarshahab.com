@@ -1,190 +1,628 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mudassar Shahab | FinOps Leader, Author, Cloud Economics</title>
-  <meta name="description" content="Official website of Mudassar Shahab, FinOps leader, author, and cloud economics practitioner focused on cloud financial management, AI cost governance, and engineering accountability.">
+
+  <title>Mudassar Shahab | FinOps, Cloud Economics, AI Financial Governance</title>
+
+  <meta
+    name="description"
+    content="Official website of Mudassar Shahab, FinOps leader and author focused on cloud economics, engineering cost optimization, AI financial governance, and enterprise FinOps."
+  >
 
   <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --dark: #0f172a;
+      --dark-soft: #1e293b;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f7f8fa;
-      color: #1f2937;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
+    a {
+      color: inherit;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-    }
-
-    header p {
-      max-width: 800px;
-      margin: 20px auto 0;
-      font-size: 20px;
-      color: #cbd5e1;
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
     }
 
     nav {
-      background: white;
-      padding: 16px;
-      text-align: center;
-      border-bottom: 1px solid #e5e7eb;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    nav a {
-      margin: 0 15px;
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
       text-decoration: none;
-      color: #1f2937;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 15px;
       font-weight: 600;
+      color: var(--muted);
     }
 
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 50px 20px;
+    .nav-links a:hover {
+      color: var(--text);
     }
 
-    section {
-      background: white;
-      padding: 35px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
+    .hero {
+      background: var(--dark);
+      color: white;
+      padding: 100px 0 90px;
     }
 
-    h2 {
-      margin-top: 0;
-      color: #0f172a;
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(44px, 7vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 {
+      margin: 22px 0 0;
+      max-width: 760px;
+      font-size: clamp(22px, 3vw, 30px);
+      line-height: 1.35;
+      font-weight: 500;
+      color: #cbd5e1;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 28px 0 0;
+      font-size: 18px;
+      color: #94a3b8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #0f172a;
-      color: white;
+      padding: 13px 20px;
+      border-radius: 7px;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .button-primary {
+      background: white;
+      color: var(--dark);
+    }
+
+    .button-secondary {
+      border: 1px solid #475569;
+      color: white;
+    }
+
+    main {
+      padding: 70px 0;
+    }
+
+    section {
+      margin-bottom: 75px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 32px;
+      letter-spacing: -0.6px;
+    }
+
+    .section-heading p {
+      max-width: 760px;
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 30px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .panel p:first-child {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .focus-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .focus-list li {
+      margin-bottom: 10px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .card-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .article-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .article-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+    }
+
+    .article-item h3 {
+      margin: 0 0 5px;
+      font-size: 19px;
+    }
+
+    .article-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .article-item a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .resource-banner {
+      background: var(--dark-soft);
+      color: white;
+      border-radius: 14px;
+      padding: 38px;
+    }
+
+    .resource-banner h2 {
+      margin-top: 0;
+    }
+
+    .resource-banner p {
+      max-width: 760px;
+      color: #cbd5e1;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .contact-links a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--accent);
     }
 
     footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #6b7280;
+      border-top: 1px solid var(--border);
+      padding: 35px 0;
+      color: #64748b;
       font-size: 14px;
     }
-  </style>
 
+    @media (max-width: 800px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        gap: 14px 18px;
+      }
+
+      .hero {
+        padding: 75px 0 65px;
+      }
+
+      .about-grid,
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Mudassar Shahab</h1>
-  <p>
-    FinOps Leader focused on cloud economics, engineering cost optimization,
-    AI financial governance, and enterprise cloud financial management.
-  </p>
-</header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#books">Books</a>
-  <a href="#articles">Articles</a>
-  <a href="#projects">Projects</a>
-  <a href="#resources">Resources</a>
-  <a href="#contact">Contact</a>
+  <div class="container nav-inner">
+    <a class="brand" href="#">Mudassar Shahab</a>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#books">Books</a>
+      <a href="#articles">Articles</a>
+      <a href="#projects">Projects</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
 
-<main>
+<header class="hero">
+  <div class="container">
+    <div class="hero-content">
 
-<section id="about">
-  <h2>About</h2>
-  <p>
-    I work at the intersection of cloud engineering, finance, architecture,
-    and business accountability. My focus is building practical FinOps
-    operating models, improving cloud cost efficiency, strengthening
-    engineering ownership, and connecting technology spend to business value.
-  </p>
+      <p class="eyebrow">
+        FinOps · Cloud Economics · AI Financial Governance
+      </p>
 
-  <p>
-    My work spans AWS, Azure, cloud governance, commitment strategy,
-    cost allocation, forecasting, optimization, unit economics,
-    and financial governance for AI and GenAI workloads.
-  </p>
-</section>
+      <h1>Mudassar Shahab</h1>
 
-<section id="books">
-  <h2>Books</h2>
+      <h2>
+        Enterprise FinOps leader focused on the economics, governance,
+        engineering accountability, and business value of cloud and AI.
+      </h2>
 
-  <h3>The Economically Architected Cloud</h3>
-  <p>
-    A practical guide to designing cloud environments with economic
-    architecture built into strategy, platform design, governance,
-    resilience, commercial models, and engineering decisions.
-  </p>
+      <p>
+        I work across Finance, Engineering, Architecture, and platform teams
+        to improve cloud cost efficiency, build financial accountability,
+        strengthen investment decisions, and connect technology consumption
+        to measurable business outcomes.
+      </p>
 
-  <h3>FinOps for AI</h3>
-  <p>
-    A practical playbook for managing token, agent, GPU, model,
-    infrastructure, and outcome economics across AI workloads.
-  </p>
-</section>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#books">View Books</a>
+        <a class="button button-secondary" href="#projects">View Projects</a>
+      </div>
 
-<section id="articles">
-  <h2>Articles</h2>
+    </div>
+  </div>
+</header>
 
-  <p>
-    Articles and perspectives on FinOps, cloud cost governance,
-    AI financial management, engineering accountability, and cloud economics.
-  </p>
-</section>
+<main class="container">
 
-<section id="projects">
-  <h2>Projects</h2>
+  <section id="about">
 
-  <h3>Enterprise FinOps Operating System</h3>
-  <p>
-    A practical enterprise FinOps framework covering governance,
-    allocation, forecasting, optimization, KPIs, commitment management,
-    cloud platforms, Kubernetes, and AI FinOps.
-  </p>
-</section>
+    <div class="section-heading">
+      <h2>About</h2>
+      <p>
+        My work focuses on enterprise FinOps operating models,
+        cloud economics, engineering cost optimization,
+        and financial governance for AI workloads.
+      </p>
+    </div>
 
-<section id="resources">
-  <h2>Resources</h2>
+    <div class="about-grid">
 
-  <p>
-    Supporting frameworks, templates, reference material,
-    book updates, and cloud economics resources will be published here.
-  </p>
-</section>
+      <div class="panel">
+        <p>
+          I work at the intersection of cloud engineering, finance,
+          architecture, and business accountability.
+        </p>
 
-<section id="contact">
-  <h2>Contact</h2>
+        <p>
+          My focus includes cost allocation, forecasting, commitment strategy,
+          optimization, governance, unit economics, cloud cost data,
+          engineering accountability, and AI financial management.
+        </p>
 
-  <p>
-    Connect with me through LinkedIn or GitHub for professional discussions,
-    FinOps collaboration, cloud economics, publishing, and research.
-  </p>
-</section>
+        <p>
+          I approach FinOps as an operating discipline rather than a reporting
+          function. The objective is to give engineering teams, finance teams,
+          and technology leaders reliable economic evidence for better decisions.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Primary Focus</h3>
+
+        <ul class="focus-list">
+          <li>Enterprise FinOps</li>
+          <li>Cloud Economics</li>
+          <li>Engineering Cost Optimization</li>
+          <li>AI and GenAI Economics</li>
+          <li>Commitment Strategy</li>
+          <li>Cost Allocation and Accountability</li>
+          <li>Unit Economics</li>
+          <li>Cloud Financial Governance</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="books">
+
+    <div class="section-heading">
+      <h2>Books</h2>
+      <p>
+        Practical work focused on the financial architecture,
+        governance, and economics of modern technology platforms.
+      </p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <span class="card-label">Book</span>
+
+        <h3>The Economically Architected Cloud</h3>
+
+        <p>
+          A practical guide to designing cloud environments with economic
+          architecture embedded into cloud strategy, workload placement,
+          organizational structure, observability, resilience, commercial
+          models, governance, and engineering decisions.
+        </p>
+
+        <a class="card-link" href="#">
+          Book page
+        </a>
+      </article>
+
+      <article class="card">
+        <span class="card-label">Book</span>
+
+        <h3>FinOps for AI</h3>
+
+        <p>
+          A practical playbook for token economics, agent workloads,
+          GPU infrastructure, AI cost allocation, forecasting,
+          model economics, unit economics, and financial governance.
+        </p>
+
+        <a class="card-link" href="#">
+          Book page
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="articles">
+
+    <div class="section-heading">
+      <h2>Articles</h2>
+      <p>
+        Perspectives on FinOps, cloud financial management,
+        engineering accountability, and AI economics.
+      </p>
+    </div>
+
+    <div class="article-list">
+
+      <div class="article-item">
+        <div>
+          <h3>Cloud Cost Governance</h3>
+          <p>
+            Cloud cost governance as an operating discipline across
+            engineering, finance, architecture, and accountability.
+          </p>
+        </div>
+
+        <a href="#">
+          Read article
+        </a>
+      </div>
+
+      <div class="article-item">
+        <div>
+          <h3>AI Will Change the FinOps Landscape</h3>
+          <p>
+            How AI changes cost drivers, governance,
+            engineering accountability, and unit economics.
+          </p>
+        </div>
+
+        <a href="#">
+          Read article
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+
+    <div class="section-heading">
+      <h2>Projects</h2>
+      <p>
+        Open frameworks and practical work supporting enterprise FinOps.
+      </p>
+    </div>
+
+    <div class="card">
+
+      <span class="card-label">Open Project</span>
+
+      <h3>Enterprise FinOps Operating System</h3>
+
+      <p>
+        A practical enterprise framework covering FinOps strategy,
+        governance, allocation, forecasting, optimization,
+        KPIs, commitments, cloud platforms, Kubernetes,
+        and AI FinOps.
+      </p>
+
+      <a class="card-link" href="#">
+        View project
+      </a>
+
+    </div>
+  </section>
+
+  <section id="resources">
+
+    <div class="resource-banner">
+
+      <h2>Resources</h2>
+
+      <p>
+        This section will host book references, supporting frameworks,
+        templates, decision models, updates, and practical cloud economics
+        material referenced from my published work.
+      </p>
+
+      <a class="button button-primary" href="#">
+        Browse Resources
+      </a>
+
+    </div>
+  </section>
+
+  <section id="contact">
+
+    <div class="section-heading">
+      <h2>Contact</h2>
+
+      <p>
+        For professional discussions related to FinOps,
+        cloud economics, AI financial governance,
+        publishing, or research.
+      </p>
+    </div>
+
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/mnshahab" target="_blank" rel="noopener noreferrer">
+        GitHub
+      </a>
+    </div>
+
+  </section>
 
 </main>
 
 <footer>
-  © 2026 Mudassar Shahab. All rights reserved.
+  <div class="container">
+    © 2026 Mudassar Shahab. All rights reserved.
+  </div>
 </footer>
 
 </body>
