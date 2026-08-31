@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Economically Architected Cloud Resources | Mudassar Shahab</title>
+
+  <meta
+    name="description"
+    content="Supporting resources for The Economically Architected Cloud by Mudassar Shahab, including frameworks, templates, references, implementation material, and publication updates."
+  >
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --dark: #0f172a;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 85px 0 75px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    header p {
+      max-width: 780px;
+      margin: 24px 0 0;
+      color: #cbd5e1;
+      font-size: 19px;
+    }
+
+    main {
+      padding: 65px 0 80px;
+    }
+
+    section {
+      margin-bottom: 65px;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: 30px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .resource-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px;
+    }
+
+    .resource-card span {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .resource-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .resource-card p {
+      margin: 0;
+    }
+
+    .resource-card a {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="/">Mudassar Shahab</a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/books/the-economically-architected-cloud/">Book</a>
+      <a href="/resources/">Resources</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <p class="eyebrow">Book Resources</p>
+
+    <h1>The Economically Architected Cloud</h1>
+
+    <p>
+      Supporting frameworks, templates, references, implementation guidance,
+      updates, and companion material for the book.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <h2>Purpose of This Resource Hub</h2>
+
+    <div class="panel">
+      <p>
+        This page provides maintained supporting material for readers of
+        The Economically Architected Cloud.
+      </p>
+
+      <p>
+        Resources published here will support the book with expanded examples,
+        decision frameworks, implementation templates, reference material,
+        corrections, and future updates.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Companion Resources</h2>
+
+    <div class="resource-grid">
+
+      <article class="resource-card">
+        <span>Framework</span>
+        <h3>Cloud Economics Foundations</h3>
+        <p>
+          A structured approach for connecting architecture decisions to
+          economic outcomes before implementation.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Framework</span>
+        <h3>Workload Placement Decision Model</h3>
+        <p>
+          A decision model for evaluating migration, modernization,
+          cloud placement, and workload economics.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Template</span>
+        <h3>Cloud Provider Selection Scorecard</h3>
+        <p>
+          A structured scorecard for evaluating provider fit across technical,
+          commercial, operational, and economic dimensions.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Template</span>
+        <h3>Commercial Strategy Decision Model</h3>
+        <p>
+          Supporting material for evaluating pricing models, discounts,
+          commitments, contracts, and commercial tradeoffs.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Template</span>
+        <h3>Ownership and Accountability Register</h3>
+        <p>
+          A practical structure for defining financial ownership,
+          engineering accountability, and operating cadence.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Reference</span>
+        <h3>Cloud Cost Data Foundation</h3>
+        <p>
+          Reference guidance for billing data, allocation logic,
+          reconciliation, normalization, and finance-grade cost reporting.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Model</span>
+        <h3>Resilience Economics Model</h3>
+        <p>
+          A framework for evaluating resilience, recovery objectives,
+          redundancy, service criticality, and financial tradeoffs.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+      <article class="resource-card">
+        <span>Plan</span>
+        <h3>30-60-90 Day Implementation Plan</h3>
+        <p>
+          A practical sequence for applying the book's operating model
+          within an existing cloud environment.
+        </p>
+        <a href="#">Coming soon</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Book References</h2>
+
+    <div class="panel">
+      <p>
+        References cited from the book will be organized here by chapter and
+        topic. This gives readers a stable online location for supporting
+        sources and updated reference material.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Corrections and Updates</h2>
+
+    <div class="panel">
+      <p>
+        Any confirmed correction, clarification, or edition-specific update
+        will be documented here with the affected chapter, section, and date.
+      </p>
+
+      <p>
+        No corrections have been published.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Mudassar Shahab. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
