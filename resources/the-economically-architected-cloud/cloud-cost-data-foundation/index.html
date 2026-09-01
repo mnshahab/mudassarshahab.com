@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cloud Cost Data Foundation | Mudassar Shahab</title>
+
+  <meta
+    name="description"
+    content="A cloud cost data foundation reference supporting The Economically Architected Cloud by Mudassar Shahab."
+  >
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --dark: #0f172a;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 80px 0 70px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    header p {
+      max-width: 820px;
+      margin: 24px 0 0;
+      color: #cbd5e1;
+      font-size: 19px;
+    }
+
+    main {
+      padding: 65px 0 80px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .stage {
+      display: inline-block;
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-size: 14px;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/resources/the-economically-architected-cloud/">
+      ← The Economically Architected Cloud Resources
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <p class="eyebrow">Companion Resource</p>
+
+    <h1>Cloud Cost Data Foundation</h1>
+
+    <p>
+      A practical reference for building finance-grade cloud cost data,
+      including billing ingestion, normalization, allocation, reconciliation,
+      ownership mapping, and analytical controls.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <span class="stage">Step 1</span>
+    <h2>Establish the Source Data</h2>
+
+    <div class="panel">
+      <p>
+        Start with provider billing and usage data at the lowest practical level
+        of detail. Preserve source identifiers, timestamps, pricing fields,
+        usage quantities, credits, discounts, taxes, adjustments, and account
+        or subscription context.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <span class="stage">Step 2</span>
+    <h2>Normalize the Cost Model</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data Element</th>
+          <th>What to Standardize</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Provider</td>
+          <td>Cloud provider, billing account, payer, tenant, or commercial boundary.</td>
+        </tr>
+
+        <tr>
+          <td>Service</td>
+          <td>Provider service, product family, SKU, resource type, and usage category.</td>
+        </tr>
+
+        <tr>
+          <td>Time</td>
+          <td>Usage date, billing period, invoice period, and reporting calendar.</td>
+        </tr>
+
+        <tr>
+          <td>Resource Identity</td>
+          <td>Resource ID, account, subscription, project, namespace, cluster, or other technical identifier.</td>
+        </tr>
+
+        <tr>
+          <td>Cost</td>
+          <td>List cost, effective cost, amortized cost, net cost, tax, credit, and adjustment treatment.</td>
+        </tr>
+
+        <tr>
+          <td>Currency</td>
+          <td>Billing currency, reporting currency, and foreign-exchange treatment where required.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 3</span>
+    <h2>Build Ownership and Allocation Mapping</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mapping Dimension</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Business Unit</td>
+          <td>Connect cost to the accountable organizational unit.</td>
+        </tr>
+
+        <tr>
+          <td>Product or Application</td>
+          <td>Associate spend with the service, product, application, or workload consuming resources.</td>
+        </tr>
+
+        <tr>
+          <td>Engineering Owner</td>
+          <td>Identify the team responsible for technical decisions and remediation.</td>
+        </tr>
+
+        <tr>
+          <td>Financial Owner</td>
+          <td>Identify the budget or cost-center owner responsible for financial review.</td>
+        </tr>
+
+        <tr>
+          <td>Environment</td>
+          <td>Separate production, development, test, sandbox, disaster recovery, and other environments.</td>
+        </tr>
+
+        <tr>
+          <td>Shared Service</td>
+          <td>Identify costs requiring allocation through a defined shared-cost method.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 4</span>
+    <h2>Apply Cost Treatment Rules</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Cost Treatment</th>
+          <th>Control Requirement</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Amortization</td>
+          <td>Spread prepaid or commitment-related costs across the periods receiving the economic benefit.</td>
+        </tr>
+
+        <tr>
+          <td>Credits</td>
+          <td>Define whether credits reduce service cost, remain separate, or follow another reporting policy.</td>
+        </tr>
+
+        <tr>
+          <td>Discounts</td>
+          <td>Define treatment for enterprise discounts, private pricing, negotiated rates, and commitment benefits.</td>
+        </tr>
+
+        <tr>
+          <td>Shared Costs</td>
+          <td>Use documented allocation drivers for shared platforms, support, networking, security, or central services.</td>
+        </tr>
+
+        <tr>
+          <td>Unallocated Cost</td>
+          <td>Track unmapped spend explicitly rather than hiding it inside shared or miscellaneous categories.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 5</span>
+    <h2>Reconcile to Finance</h2>
+
+    <div class="panel">
+      <p>
+        Analytical cloud cost data should reconcile to the provider invoice or
+        other approved financial source. Differences should be explainable and
+        traceable to timing, tax, credits, support charges, currency treatment,
+        marketplace transactions, adjustments, or accounting policy.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <span class="stage">Step 6</span>
+    <h2>Define Data Quality Controls</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Control</th>
+          <th>What to Monitor</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Completeness</td>
+          <td>Missing billing periods, accounts, subscriptions, projects, services, or resource records.</td>
+        </tr>
+
+        <tr>
+          <td>Allocation Coverage</td>
+          <td>Percentage of spend mapped to accountable business and engineering owners.</td>
+        </tr>
+
+        <tr>
+          <td>Tag or Metadata Quality</td>
+          <td>Missing, invalid, conflicting, or stale ownership and classification metadata.</td>
+        </tr>
+
+        <tr>
+          <td>Reconciliation Variance</td>
+          <td>Difference between analytical totals and approved financial totals.</td>
+        </tr>
+
+        <tr>
+          <td>Mapping Freshness</td>
+          <td>Stale account, product, owner, cost-center, and organizational mappings.</td>
+        </tr>
+
+        <tr>
+          <td>Transformation Integrity</td>
+          <td>Unexpected changes in transformation logic, joins, filters, cost treatment, or calculated fields.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 7</span>
+    <h2>Build a Trusted Analytical Layer</h2>
+
+    <div class="panel">
+      <p>
+        The final analytical layer should support consistent reporting across
+        cost allocation, forecasting, optimization, unit economics, commitment
+        management, anomaly analysis, and executive reporting.
+      </p>
+
+      <p>
+        The objective is one governed cost model with documented definitions,
+        traceable transformations, clear ownership, and repeatable reconciliation.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Mudassar Shahab. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
