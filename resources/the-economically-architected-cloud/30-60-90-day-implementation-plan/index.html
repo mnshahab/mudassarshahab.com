@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>30-60-90 Day Implementation Plan | Mudassar Shahab</title>
+
+  <meta
+    name="description"
+    content="A 30-60-90 day implementation plan supporting The Economically Architected Cloud by Mudassar Shahab."
+  >
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --dark: #0f172a;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 80px 0 70px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    header p {
+      max-width: 820px;
+      margin: 24px 0 0;
+      color: #cbd5e1;
+      font-size: 19px;
+    }
+
+    main {
+      padding: 65px 0 80px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .stage {
+      display: inline-block;
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-size: 14px;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/resources/the-economically-architected-cloud/">
+      ← The Economically Architected Cloud Resources
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <p class="eyebrow">Companion Resource</p>
+
+    <h1>30-60-90 Day Implementation Plan</h1>
+
+    <p>
+      A practical sequence for applying the operating model from
+      The Economically Architected Cloud within an existing cloud environment.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <span class="stage">Days 1-30</span>
+    <h2>Establish Visibility and Ownership</h2>
+
+    <div class="panel">
+      <p>
+        The first 30 days should establish a reliable baseline.
+        Focus on ownership, cloud cost data, financial visibility,
+        material risks, and decision accountability.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Workstream</th>
+          <th>Primary Actions</th>
+          <th>Expected Output</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Cloud Inventory</td>
+          <td>Document accounts, subscriptions, projects, major platforms, workloads, regions, and shared services.</td>
+          <td>Cloud estate baseline.</td>
+        </tr>
+
+        <tr>
+          <td>Ownership</td>
+          <td>Map business, engineering, financial, and platform owners to material cloud spend.</td>
+          <td>Ownership register.</td>
+        </tr>
+
+        <tr>
+          <td>Cost Data</td>
+          <td>Validate billing ingestion, cost treatment, allocation coverage, and invoice reconciliation.</td>
+          <td>Trusted cost baseline.</td>
+        </tr>
+
+        <tr>
+          <td>Architecture Review</td>
+          <td>Identify material cost drivers, resilience patterns, network dependencies, data gravity, and platform concentration.</td>
+          <td>Architecture economics findings.</td>
+        </tr>
+
+        <tr>
+          <td>Commercial Position</td>
+          <td>Document commitments, enterprise discounts, private pricing, credits, support plans, and contract obligations.</td>
+          <td>Commercial baseline.</td>
+        </tr>
+
+        <tr>
+          <td>Risk Identification</td>
+          <td>Identify unallocated spend, commitment exposure, high-cost workloads, resilience overdesign, and structural inefficiencies.</td>
+          <td>Prioritized risk register.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Days 31-60</span>
+    <h2>Prioritize and Correct Economic Gaps</h2>
+
+    <div class="panel">
+      <p>
+        The second phase should turn the baseline into decisions.
+        Prioritize the highest-value economic, architectural,
+        commercial, and governance corrections.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Workstream</th>
+          <th>Primary Actions</th>
+          <th>Expected Output</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Workload Placement</td>
+          <td>Review workloads with weak technical, economic, or strategic placement.</td>
+          <td>Placement decision backlog.</td>
+        </tr>
+
+        <tr>
+          <td>Optimization</td>
+          <td>Prioritize rightsizing, idle-resource removal, scheduling, storage optimization, network efficiency, and service modernization.</td>
+          <td>Optimization roadmap.</td>
+        </tr>
+
+        <tr>
+          <td>Allocation</td>
+          <td>Correct ownership gaps, shared-cost allocation logic, metadata quality, and unmapped spend.</td>
+          <td>Improved allocation coverage.</td>
+        </tr>
+
+        <tr>
+          <td>Forecasting</td>
+          <td>Build demand-based forecasts tied to workload changes, growth assumptions, migrations, and commitments.</td>
+          <td>Forecast baseline.</td>
+        </tr>
+
+        <tr>
+          <td>Commercial Strategy</td>
+          <td>Review commitment coverage, discount structures, renewal timing, portability, and underutilization risk.</td>
+          <td>Commercial action plan.</td>
+        </tr>
+
+        <tr>
+          <td>Governance</td>
+          <td>Define decision rights, approval thresholds, exception handling, and review cadence.</td>
+          <td>Governance operating model.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Days 61-90</span>
+    <h2>Operationalize the Model</h2>
+
+    <div class="panel">
+      <p>
+        The final phase should move from project activity into repeatable
+        operating discipline. Establish recurring reviews, measurable outcomes,
+        ownership, and decision evidence.
+      </p>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Workstream</th>
+          <th>Primary Actions</th>
+          <th>Expected Output</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Operating Cadence</td>
+          <td>Establish weekly, monthly, and quarterly reviews for cost, forecast, optimization, commitments, and architecture decisions.</td>
+          <td>Recurring FinOps cadence.</td>
+        </tr>
+
+        <tr>
+          <td>KPI Framework</td>
+          <td>Define metrics for allocation, forecast accuracy, optimization execution, commitment performance, and unit economics.</td>
+          <td>Management scorecard.</td>
+        </tr>
+
+        <tr>
+          <td>Engineering Accountability</td>
+          <td>Assign remediation owners, due dates, economic impact, risk acceptance, and escalation paths.</td>
+          <td>Execution accountability model.</td>
+        </tr>
+
+        <tr>
+          <td>Architecture Economics</td>
+          <td>Embed cost, resilience, placement, network, and commercial analysis into architecture reviews.</td>
+          <td>Economic architecture gate.</td>
+        </tr>
+
+        <tr>
+          <td>Executive Reporting</td>
+          <td>Report material trends, risks, savings realization, forecast variance, and business-value indicators.</td>
+          <td>Executive operating view.</td>
+        </tr>
+
+        <tr>
+          <td>Continuous Improvement</td>
+          <td>Define review triggers for material changes in demand, architecture, pricing, contracts, regulation, and business strategy.</td>
+          <td>Ongoing improvement cycle.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>90-Day Outcome</h2>
+
+    <div class="panel">
+      <p>
+        By day 90, the organization should have a trusted cloud cost baseline,
+        clear ownership, prioritized economic actions, defined decision rights,
+        a working operating cadence, and a roadmap for deeper architectural
+        and financial improvement.
+      </p>
+
+      <p>
+        The objective is not to complete every optimization within 90 days.
+        The objective is to establish a repeatable system for making,
+        executing, and reviewing cloud economic decisions.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Mudassar Shahab. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
