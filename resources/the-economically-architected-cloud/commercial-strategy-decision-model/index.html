@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Commercial Strategy Decision Model | Mudassar Shahab</title>
+
+  <meta
+    name="description"
+    content="A commercial strategy decision model supporting The Economically Architected Cloud by Mudassar Shahab."
+  >
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --dark: #0f172a;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    header {
+      background: var(--dark);
+      color: white;
+      padding: 80px 0 70px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #93c5fd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    header p {
+      max-width: 820px;
+      margin: 24px 0 0;
+      color: #cbd5e1;
+      font-size: 19px;
+    }
+
+    main {
+      padding: 65px 0 80px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .stage {
+      display: inline-block;
+      padding: 5px 9px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f1f5f9;
+      font-size: 14px;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      table {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <a href="/resources/the-economically-architected-cloud/">
+      ← The Economically Architected Cloud Resources
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <p class="eyebrow">Companion Resource</p>
+
+    <h1>Commercial Strategy Decision Model</h1>
+
+    <p>
+      A structured model for evaluating cloud pricing, discounts,
+      commitments, contracts, incentives, support economics,
+      and long-term commercial tradeoffs.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <section>
+    <span class="stage">Step 1</span>
+    <h2>Establish the Demand Baseline</h2>
+
+    <div class="panel">
+      <p>
+        Start with expected workload demand before evaluating commercial terms.
+        Document current spend, forecasted consumption, workload stability,
+        growth expectations, architecture changes, migration plans,
+        and known demand uncertainty.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <span class="stage">Step 2</span>
+    <h2>Separate Rate Optimization from Usage Optimization</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>Decision Focus</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Usage Optimization</td>
+          <td>Reduce unnecessary consumption through rightsizing, scheduling, modernization, storage management, and waste removal.</td>
+        </tr>
+
+        <tr>
+          <td>Rate Optimization</td>
+          <td>Reduce the effective price of required consumption through discounts, commitments, negotiated pricing, and purchasing constructs.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 3</span>
+    <h2>Evaluate Commercial Levers</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Commercial Lever</th>
+          <th>What to Evaluate</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Enterprise Discounts</td>
+          <td>Discount scope, eligibility, spend thresholds, term, exclusions, and interaction with other pricing constructs.</td>
+        </tr>
+
+        <tr>
+          <td>Commitment Programs</td>
+          <td>Coverage, utilization risk, duration, portability, break-even point, flexibility, and workload stability.</td>
+        </tr>
+
+        <tr>
+          <td>Private Pricing</td>
+          <td>Negotiated service rates, minimum spend, term length, scope, and expected effective savings.</td>
+        </tr>
+
+        <tr>
+          <td>Migration Incentives</td>
+          <td>Credits, funding, professional services support, expiration terms, and dependency on migration milestones.</td>
+        </tr>
+
+        <tr>
+          <td>Support Plans</td>
+          <td>Support fees, service levels, escalation requirements, and whether support pricing scales with total spend.</td>
+        </tr>
+
+        <tr>
+          <td>Marketplace Economics</td>
+          <td>Marketplace commitments, vendor consolidation, private offers, software pricing, and impact on enterprise spend commitments.</td>
+        </tr>
+
+        <tr>
+          <td>Contract Flexibility</td>
+          <td>Renewal terms, exit provisions, portability, renegotiation rights, minimum spend obligations, and termination exposure.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 4</span>
+    <h2>Measure Effective Economics</h2>
+
+    <div class="panel">
+      <p>
+        Compare commercial options using effective cost rather than headline discount percentage.
+      </p>
+
+      <p>
+        Effective economics should include expected utilization, unused commitments,
+        support charges, credits, incentives, minimum spend obligations,
+        migration costs, contract duration, and workload uncertainty.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <span class="stage">Step 5</span>
+    <h2>Test Commitment Risk</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Risk Area</th>
+          <th>Decision Question</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Demand Stability</td>
+          <td>Is the committed usage expected to remain stable throughout the term?</td>
+        </tr>
+
+        <tr>
+          <td>Architecture Change</td>
+          <td>Will modernization, migration, or service substitution reduce committed demand?</td>
+        </tr>
+
+        <tr>
+          <td>Business Change</td>
+          <td>Could divestiture, acquisition, product retirement, or demand contraction change the consumption profile?</td>
+        </tr>
+
+        <tr>
+          <td>Portability</td>
+          <td>Can the commitment move across services, regions, accounts, or eligible workloads?</td>
+        </tr>
+
+        <tr>
+          <td>Break-Even</td>
+          <td>At what utilization level does the commercial construct outperform the flexible alternative?</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <span class="stage">Step 6</span>
+    <h2>Document the Commercial Decision</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Decision Field</th>
+          <th>Required Evidence</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Selected Commercial Model</td>
+          <td>Discount structure, commitment model, pricing arrangement, or contract strategy.</td>
+        </tr>
+
+        <tr>
+          <td>Financial Rationale</td>
+          <td>Expected effective savings, total cost impact, and break-even analysis.</td>
+        </tr>
+
+        <tr>
+          <td>Demand Assumptions</td>
+          <td>Consumption forecast, workload stability, growth, migration, and modernization assumptions.</td>
+        </tr>
+
+        <tr>
+          <td>Commercial Dependencies</td>
+          <td>Minimum spend, eligibility, term, credits, support structure, and contractual dependencies.</td>
+        </tr>
+
+        <tr>
+          <td>Risk Exposure</td>
+          <td>Underutilization, lock-in, stranded commitment, renewal, portability, and contract risk.</td>
+        </tr>
+
+        <tr>
+          <td>Review Trigger</td>
+          <td>Conditions requiring the commercial decision to be reviewed or renegotiated.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Mudassar Shahab. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
